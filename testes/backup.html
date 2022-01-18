@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Rubik's Cube Solver</title>
+<link href="assets/css/images/rubikscube.ico" rel="icon" type="image/x-icon" />
+<link href="assets/css/images/rubikscube.ico" rel="shortcut icon" type="image/x-icon" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style>
+table.tab1 {
+    font-family: Times New Roman, sans-serif;
+    border-collapse: collapse;
+}
+
+table.tab1 td, th {
+    border: 5px solid black;
+    text-align: left;
+    
+}
+table.tab2 td, th {
+    border: 3px solid black;    
+}
+
+th {
+  border: 0px;
+}
+
+</style>
+</head>
+<body id="pagina" style="background-color:LightGray;"> 
+<table width=100% border=0><tr><td align=center colspan=2 style="background-color:LightBlue;">
+<h2>Rubik's Cube Solver</h2>
+</td>
+<tr>
+<td rowspan=2 width=50%>
+<table border=0>
+  <tr>
+    <td></td>
+    <td>
+      <table class=tab1>
+        <tr>
+          <td onmouseover="mouseOver('Y00' , cor)" onmouseout="mouseOut('Y00',document.getElementById('var.Y00').value)"><img id="Y00" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y00')" /></td>
+          <td onmouseover="mouseOver('Y01' , cor)" onmouseout="mouseOut('Y01',document.getElementById('var.Y01').value)"><img id="Y01" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y01')"/></td>
+          <td onmouseover="mouseOver('Y02' , cor)" onmouseout="mouseOut('Y02',document.getElementById('var.Y02').value)"><img id="Y02" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y02')"/></td>
+        </tr>
+        <tr>
+          <td onmouseover="mouseOver('Y10' , cor)" onmouseout="mouseOut('Y10',document.getElementById('var.Y10').value)"><img id="Y10" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y10')"/></td>
+          <td><img src="assets/css/images/YELLOW.png" style="width:45px;height:45px;"/></td>
+          <td onmouseover="mouseOver('Y12' , cor)" onmouseout="mouseOut('Y12',document.getElementById('var.Y12').value)"><img id="Y12" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y12')"/></td>
+        </tr>
+        <tr>
+          <td onmouseover="mouseOver('Y20' , cor)" onmouseout="mouseOut('Y20',document.getElementById('var.Y20').value)"><img id="Y20" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y20')"/></td>
+          <td onmouseover="mouseOver('Y21' , cor)" onmouseout="mouseOut('Y21',document.getElementById('var.Y21').value)"><img id="Y21" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y21')"/></td>
+          <td onmouseover="mouseOver('Y22' , cor)" onmouseout="mouseOut('Y22',document.getElementById('var.Y22').value)"><img id="Y22" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="changeColor('Y22')"/></td>
+        </tr>
+      </table></td>
+<td colspan=2 align=center>
+
+		
+		<a href="D:\Raul\dev\Rubiks\rubiks.html">
+		<input type="button" value="RESET"/>
+		</a>
+
+</td>
+</tr>
+<tr>
+    <td><table class=tab1>
+		<tr>
+          <td onmouseover="mouseOver('B00' , cor)" onmouseout="mouseOut('B00',document.getElementById('var.B00').value)"><img id="B00" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B00')" /></td>
+          <td onmouseover="mouseOver('B01' , cor)" onmouseout="mouseOut('B01',document.getElementById('var.B01').value)"><img id="B01" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B01')"/></td>
+          <td onmouseover="mouseOver('B02' , cor)" onmouseout="mouseOut('B02',document.getElementById('var.B02').value)"><img id="B02" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B02')"/></td>
+        </tr>
+        <tr>
+          <td onmouseover="mouseOver('B10' , cor)" onmouseout="mouseOut('B10',document.getElementById('var.B10').value)"><img id="B10" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B10')"/></td>
+          <td><img src="assets/css/images/BLUE.png" style="width:45px;height:45px;"/></td>
+          <td onmouseover="mouseOver('B12' , cor)" onmouseout="mouseOut('B12',document.getElementById('var.B12').value)"><img id="B12" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B12')"/></td>
+        </tr>
+        <tr>
+          <td onmouseover="mouseOver('B20' , cor)" onmouseout="mouseOut('B20',document.getElementById('var.B20').value)"><img id="B20" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B20')"/></td>
+          <td onmouseover="mouseOver('B21' , cor)" onmouseout="mouseOut('B21',document.getElementById('var.B21').value)"><img id="B21" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B21')"/></td>
+          <td onmouseover="mouseOver('B22' , cor)" onmouseout="mouseOut('B22',document.getElementById('var.B22').value)"><img id="B22" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="changeColor('B22')"/></td>
+        </tr>
+</table></td>
+    <td>
+<table class=tab1>
+<tr>
+  <td onmouseover="mouseOver('R00' , cor)" onmouseout="mouseOut('R00',document.getElementById('var.R00').value)"><img id="R00" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R00')" /></td>
+  <td onmouseover="mouseOver('R01' , cor)" onmouseout="mouseOut('R01',document.getElementById('var.R01').value)"><img id="R01" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R01')"/></td>
+  <td onmouseover="mouseOver('R02' , cor)" onmouseout="mouseOut('R02',document.getElementById('var.R02').value)"><img id="R02" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R02')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('R10' , cor)" onmouseout="mouseOut('R10',document.getElementById('var.R10').value)"><img id="R10" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R10')"/></td>
+  <td><img src="assets/css/images/RED.png" style="width:45px;height:45px;"/></td>
+  <td onmouseover="mouseOver('R12' , cor)" onmouseout="mouseOut('R12',document.getElementById('var.R12').value)"><img id="R12" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R12')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('R20' , cor)" onmouseout="mouseOut('R20',document.getElementById('var.R20').value)"><img id="R20" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R20')"/></td>
+  <td onmouseover="mouseOver('R21' , cor)" onmouseout="mouseOut('R21',document.getElementById('var.R21').value)"><img id="R21" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R21')"/></td>
+  <td onmouseover="mouseOver('R22' , cor)" onmouseout="mouseOut('R22',document.getElementById('var.R22').value)"><img id="R22" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="changeColor('R22')"/></td>
+</tr>
+</table></td>
+<td><table class=tab1>
+<tr>
+  <td onmouseover="mouseOver('G00' , cor)" onmouseout="mouseOut('G00',document.getElementById('var.G00').value)"><img id="G00" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G00')"/></td>
+  <td onmouseover="mouseOver('G01' , cor)" onmouseout="mouseOut('G01',document.getElementById('var.G01').value)"><img id="G01" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G01')"/></td>
+  <td onmouseover="mouseOver('G02' , cor)" onmouseout="mouseOut('G02',document.getElementById('var.G02').value)"><img id="G02" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G02')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('G10' , cor)" onmouseout="mouseOut('G10',document.getElementById('var.G10').value)"><img id="G10" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G10')"/></td>
+  <td><img src="assets/css/images/GREEN.png" style="width:45px;height:45px;"/></td>
+  <td onmouseover="mouseOver('G12' , cor)" onmouseout="mouseOut('G12',document.getElementById('var.G12').value)"><img id="G12" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G12')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('G20' , cor)" onmouseout="mouseOut('G20',document.getElementById('var.G20').value)"><img id="G20" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G20')"/></td>
+  <td onmouseover="mouseOver('G21' , cor)" onmouseout="mouseOut('G21',document.getElementById('var.G21').value)"><img id="G21" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G21')"/></td>
+  <td onmouseover="mouseOver('G22' , cor)" onmouseout="mouseOut('G22',document.getElementById('var.G22').value)"><img id="G22" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="changeColor('G22')"/></td>
+</tr>
+</table></td>
+<td><table class=tab1>
+<tr>
+  <td onmouseover="mouseOver('O00' , cor)" onmouseout="mouseOut('O00',document.getElementById('var.O00').value)"><img id="O00" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O00')"/></td>
+  <td onmouseover="mouseOver('O01' , cor)" onmouseout="mouseOut('O01',document.getElementById('var.O01').value)"><img id="O01" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O01')"/></td>
+  <td onmouseover="mouseOver('O02' , cor)" onmouseout="mouseOut('O02',document.getElementById('var.O02').value)"><img id="O02" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O02')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('O10' , cor)" onmouseout="mouseOut('O10',document.getElementById('var.O10').value)"><img id="O10" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O10')"/></td>
+  <td><img src="assets/css/images/ORANGE.png" style="width:45px;height:45px;"/></td>
+  <td onmouseover="mouseOver('O12' , cor)" onmouseout="mouseOut('O12',document.getElementById('var.O12').value)"><img id="O12" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O12')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('O20' , cor)" onmouseout="mouseOut('O20',document.getElementById('var.O20').value)"><img id="O20" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O20')"/></td>
+  <td onmouseover="mouseOver('O21' , cor)" onmouseout="mouseOut('O21',document.getElementById('var.O21').value)"><img id="O21" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O21')"/></td>
+  <td onmouseover="mouseOver('O22' , cor)" onmouseout="mouseOut('O22',document.getElementById('var.O22').value)"><img id="O22" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="changeColor('O22')"/></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+    <td></td>
+    <td>
+<table class=tab1>
+<tr>
+  <td onmouseover="mouseOver('W00' , cor)" onmouseout="mouseOut('W00',document.getElementById('var.W00').value)"><img id="W00" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W00')"/></td>
+  <td onmouseover="mouseOver('W01' , cor)" onmouseout="mouseOut('W01',document.getElementById('var.W01').value)"><img id="W01" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W01')"/></td>
+  <td onmouseover="mouseOver('W02' , cor)" onmouseout="mouseOut('W02',document.getElementById('var.W02').value)"><img id="W02" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W02')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('W10' , cor)" onmouseout="mouseOut('W10',document.getElementById('var.W10').value)"><img id="W10" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W10')"/></td>
+  <td><img src="assets/css/images/WHITE.png" style="width:45px;height:45px;"/></td>
+  <td onmouseover="mouseOver('W12' , cor)" onmouseout="mouseOut('W12',document.getElementById('var.W12').value)"><img id="W12" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W12')"/></td>
+</tr>
+<tr>
+  <td onmouseover="mouseOver('W20' , cor)" onmouseout="mouseOut('W20',document.getElementById('var.W20').value)"><img id="W20" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W20')"/></td>
+  <td onmouseover="mouseOver('W21' , cor)" onmouseout="mouseOut('W21',document.getElementById('var.W21').value)"><img id="W21" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W21')"/></td>
+  <td onmouseover="mouseOver('W22' , cor)" onmouseout="mouseOut('W22',document.getElementById('var.W22').value)"><img id="W22" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="changeColor('W22')"/></td>
+</tr>
+</table></td>
+<td colspan=2 align=center>
+<table>
+<tr><td></td></tr>
+<tr>
+<td align=center>
+<form method="POST" action="./resolveCube" name="form1">
+						 
+						<input type="button" value="RESOLVER" onclick="checkCube()" /> 
+						<input type="hidden" id="var.Y00" name="Y00" value="YELLOW"/>		
+						<input type="hidden" id="var.Y01" name="Y01" value="YELLOW"/>
+						<input type="hidden" id="var.Y02" name="Y02" value="YELLOW"/>
+						<input type="hidden" id="var.Y10" name="Y10" value="YELLOW"/>		
+						<input type="hidden" id="var.Y11" name="Y11" value="YELLOW"/>
+						<input type="hidden" id="var.Y12" name="Y12" value="YELLOW"/>
+						<input type="hidden" id="var.Y20" name="Y20" value="YELLOW"/>		
+						<input type="hidden" id="var.Y21" name="Y21" value="YELLOW"/>
+						<input type="hidden" id="var.Y22" name="Y22" value="YELLOW"/>
+						
+						<input type="hidden" id="var.W00" name="W00" value="WHITE"/>		
+						<input type="hidden" id="var.W01" name="W01" value="WHITE"/>
+						<input type="hidden" id="var.W02" name="W02" value="WHITE"/>
+						<input type="hidden" id="var.W10" name="W10" value="WHITE"/>		
+						<input type="hidden" id="var.W11" name="W11" value="WHITE"/>
+						<input type="hidden" id="var.W12" name="W12" value="WHITE"/>
+						<input type="hidden" id="var.W20" name="W20" value="WHITE"/>		
+						<input type="hidden" id="var.W21" name="W21" value="WHITE"/>
+						<input type="hidden" id="var.W22" name="W22" value="WHITE"/>
+						
+						<input type="hidden" id="var.R00" name="R00" value="RED"/>		
+						<input type="hidden" id="var.R01" name="R01" value="RED"/>
+						<input type="hidden" id="var.R02" name="R02" value="RED"/>
+						<input type="hidden" id="var.R10" name="R10" value="RED"/>		
+						<input type="hidden" id="var.R11" name="R11" value="RED"/>
+						<input type="hidden" id="var.R12" name="R12" value="RED"/>
+						<input type="hidden" id="var.R20" name="R20" value="RED"/>		
+						<input type="hidden" id="var.R21" name="R21" value="RED"/>
+						<input type="hidden" id="var.R22" name="R22" value="RED"/>
+						
+						<input type="hidden" id="var.O00" name="O00" value="ORANGE"/>		
+						<input type="hidden" id="var.O01" name="O01" value="ORANGE"/>
+						<input type="hidden" id="var.O02" name="O02" value="ORANGE"/>
+						<input type="hidden" id="var.O10" name="O10" value="ORANGE"/>		
+						<input type="hidden" id="var.O11" name="O11" value="ORANGE"/>
+						<input type="hidden" id="var.O12" name="O12" value="ORANGE"/>
+						<input type="hidden" id="var.O20" name="O20" value="ORANGE"/>		
+						<input type="hidden" id="var.O21" name="O21" value="ORANGE"/>
+						<input type="hidden" id="var.O22" name="O22" value="ORANGE"/>
+						
+						<input type="hidden" id="var.G00" name="G00" value="GREEN"/>		
+						<input type="hidden" id="var.G01" name="G01" value="GREEN"/>
+						<input type="hidden" id="var.G02" name="G02" value="GREEN"/>
+						<input type="hidden" id="var.G10" name="G10" value="GREEN"/>		
+						<input type="hidden" id="var.G11" name="G11" value="GREEN"/>
+						<input type="hidden" id="var.G12" name="G12" value="GREEN"/>
+						<input type="hidden" id="var.G20" name="G20" value="GREEN"/>		
+						<input type="hidden" id="var.G21" name="G21" value="GREEN"/>
+						<input type="hidden" id="var.G22" name="G22" value="GREEN"/>
+						
+						<input type="hidden" id="var.B00" name="B00" value="BLUE"/>		
+						<input type="hidden" id="var.B01" name="B01" value="BLUE"/>
+						<input type="hidden" id="var.B02" name="B02" value="BLUE"/>
+						<input type="hidden" id="var.B10" name="B10" value="BLUE"/>		
+						<input type="hidden" id="var.B11" name="B11" value="BLUE"/>
+						<input type="hidden" id="var.B12" name="B12" value="BLUE"/>
+						<input type="hidden" id="var.B20" name="B20" value="BLUE"/>		
+						<input type="hidden" id="var.B21" name="B21" value="BLUE"/>
+						<input type="hidden" id="var.B22" name="B22" value="BLUE"/>
+				</form>
+				</td>
+				</tr>
+				<tr>
+				<td align=center>
+				<a href="D:\Raul\dev\Rubiks\movimentos.html"> <input type="button" value="HELP"/></a>
+				</td>
+				</tr>
+				<tr><td></td></tr>
+				</table>
+</td>
+</tr>
+</table>
+</td>
+<td align=center width=50%>
+<h3>Selecione a cor:</h3>
+<table id="corTabela">
+<tr></tr>
+<tr>
+<td></td>
+<td></td>
+<td>
+<table class=tab2>
+			<tr>
+			<td onmouseover="mouseOver('setY' , 'YELLOW')" onmouseout="mouseOut('setY','YELLOW')"><img id="setY" src="assets/css/images/YELLOW.png" style="width:45px;height:45px;" onclick="setColor('YELLOW')"/></td>
+			<td onmouseover="mouseOver('setR' , 'RED')" onmouseout="mouseOut('setR','RED')"><img id="setR" src="assets/css/images/RED.png" style="width:45px;height:45px;" onclick="setColor('RED')" /></td>
+			<td onmouseover="mouseOver('setB' , 'BLUE')" onmouseout="mouseOut('setB','BLUE')"><img id="setB" src="assets/css/images/BLUE.png" style="width:45px;height:45px;" onclick="setColor('BLUE')" /></td>
+			</tr>
+			<tr>
+			<td onmouseover="mouseOver('setW' , 'WHITE')" onmouseout="mouseOut('setW','WHITE')"><img id="setW" src="assets/css/images/WHITE.png" style="width:45px;height:45px;" onclick="setColor('WHITE')"/></td>
+			<td onmouseover="mouseOver('setO' , 'ORANGE')" onmouseout="mouseOut('setO','ORANGE')"><img id="setO" src="assets/css/images/ORANGE.png" style="width:45px;height:45px;" onclick="setColor('ORANGE')"/></td>
+			<td onmouseover="mouseOver('setG' , 'GREEN')" onmouseout="mouseOut('setG','GREEN')"><img id="setG" src="assets/css/images/GREEN.png" style="width:45px;height:45px;" onclick="setColor('GREEN')"/></td>
+			</tr>
+			</table>
+			</td>
+			<td></td>
+			<td></td>
+			</tr>
+			<tr></tr>
+			</table>
+</td>
+</tr>
+<tr>
+<td align="center">
+<h1>Solução:</h1><textarea rows="4" cols="80" readonly=true id="textarea"></textarea>
+</td>
+</tr>
+</table>
+<footer id="footer" align="center">
+	<span class="copyright">&copy; Encontrou algum problema? <a href="#">CLIQUE AQUI</a>.</span>
+</footer>
+<script>
+
+</script>
+		</body>
+</html>
